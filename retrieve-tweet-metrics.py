@@ -37,7 +37,7 @@ else:
         csv_headers, csv_row = json_to_csv(record, csv_headers, csv_row)
         csv_rows.append(csv_row)
 
-    with open('out/sample.csv', 'w') as f:
+    with open('out/tweet-metrics.csv', 'w') as f:
         writer = csv.DictWriter(f, fieldnames=csv_headers)
         writer.writeheader()
         for r in csv_rows:
